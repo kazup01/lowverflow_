@@ -3,16 +3,21 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Lowverflow</title>
+		<script src="http://fb.me/react-with-addons-0.12.2.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.12.2.js"></script>
 	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 	<style>
 		body { padding-top: 50px; }
 	</style>
 </head>
 <body>
-	<div class="container">
-		<div class="jumbotron">
-			<h1>res.sendFile()</h1>
-		</div>
-	</div>
+	<div id="app-container"></div>
+	<script type="text/jsx">
+    React.render(
+      <h1>My TODO</h1>,
+      document.getElementById('app-container')
+    );
+    </script>
+
 </body>
 </html>

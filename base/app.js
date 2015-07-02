@@ -1,3 +1,4 @@
+//module setting
 var express = require('express');
 var bodyParser = require('body-parser');
 var methodOverride = require('method-override');
@@ -7,10 +8,19 @@ var path = require('path');
 var app = express();
 
 
+//=========================================
+
+
 //route
 app.get('/', function(req, res){
 	res.sendFile(path.join(__dirname + '/views/index.html'));
 });
+app.get('/users', function(req, res){
+	res.sendFile(path.join(__dirname + '/views/users.html'));
+});
+
+
+//=========================================
 
 
 //connect to mysql
@@ -20,7 +30,7 @@ var connection = mysql.createConnection({
 	password	: 	'test_password',
 	database	: 	'test_db'
 });
-/**====mysql接続例始め
+/**mysql接続例始め
 connection.connect();
 
 connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
@@ -30,6 +40,9 @@ connection.query('SELECT 1 + 1 AS solution', function(err, rows, fields) {
 
 connection.end();
 mysql接続例終わり */
+
+
+//=========================================
 
 
 //port番号指定
