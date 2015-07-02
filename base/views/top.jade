@@ -1,6 +1,12 @@
 doctype html
 html
   head
-    title my jade template
+    script(src='http://fb.me/react-with-addons-0.12.2.js')
+    script(src='http://fb.me/JSXTransformer-0.12.2.js')
   body
-    h1 Hello #{name}
+    #app-container
+      script(type='text/jsx')
+      	React.render(
+          <h1>My TODO</h1>,
+          document.getElementById('app-container')
+      );
