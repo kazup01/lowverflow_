@@ -8,6 +8,7 @@ var todos = [{
 	done	: 	false
 }];
 
+
 var Todo = React.createClass({
 	render: function(){
 		var todo = this.props.todo;
