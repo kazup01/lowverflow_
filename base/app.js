@@ -8,12 +8,21 @@ var path = require('path');
 var app = express();
 
 
+
+//=========================================
+//settings
+app.set('view engine', 'jade');
+app.set('views', __dirname + '/views');
+
 //=========================================
 
 
 //route
+// app.get('/', function(req, res){
+// 	res.sendFile(path.join(__dirname + '/views/index.jade'));
+// });
 app.get('/', function(req, res){
-	res.sendFile(path.join(__dirname + '/views/index.html'));
+	res.render('index', {});
 });
 app.get('/users', function(req, res){
 	res.sendFile(path.join(__dirname + '/views/users.html'));
