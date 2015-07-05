@@ -11,8 +11,8 @@ var app = express();
 
 //=========================================
 //settings
-app.set('view engine', 'jade');
 app.set('views', __dirname + '/views');
+app.set('view engine', 'jade');
 
 //=========================================
 
@@ -24,10 +24,12 @@ app.set('views', __dirname + '/views');
 app.get('/', function(req, res){
 	res.render('index', {});
 });
-app.get('/users', function(req, res){
-	res.sendFile(path.join(__dirname + '/views/users.html'));
+//mysqlのusersテーブルからデータを読んでいる
+app.get('/users', function (req, res) {
+  connection.query('select * from users', function (err, rows) {
+    res.render('users', { title: 'connect to mysql', users: rows });
+  });
 });
-
 
 //=========================================
 

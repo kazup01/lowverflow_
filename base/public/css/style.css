@@ -1,0 +1,13 @@
+table {
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 4px;
+}
+
+footer {
+	text-align: center;
+	padding: 10px;
+	background: #000000;
+}

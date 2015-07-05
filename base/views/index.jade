@@ -1,27 +1,35 @@
-extends ./layout/nav.jade
+extends ./layout/default.jade
 
 block title
-	title lowvweflow
+	title lowverflow
 
 block content
-	.panel.panel-default
-			.panel-heading Panel Heading
-			.panel-body We are a fairly small, flexible design studio that designs for print and web. We work flexibly with clients to fulfil their design needs. Whether you need to create a brand from scratch, including marketing materials and a beautiful and functional website or whether you are looking for a design refresh we are confident you will be pleased with the results.
-
-	a.btn.btn-default Default
-
-	a.btn.btn-primary( href="users" ) Primary
- 
-	a.btn.btn-success Success
- 
-	a.btn.btn-info Info
- 
-	a.btn.btn-warning Warning
- 
-	a.btn.btn-danger Danger
-
 	.container
-		.jumbotron
-			h1 Welcome to lowvweflow!
-			p This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.
 
+		.jumbotron
+			h1 Welcome to lowverflow!
+			p appleapple
+
+				form.form-signin(action="#", method="post")
+					h2.form-signin-heading sign in form
+					input.input-block-level(type="text", name="username", placeholder="Email address")
+					input.input-block-level(type="password", name="password", placeholder="Password")
+					label.checkbox.
+						<input type="checkbox" value="remember-me" /> Remember me
+					button.btn.btn-large.btn-primary(type="submit") Sign in
+
+		.panel.panel-default
+				.panel-heading panel
+				.panel-body apple watch want!!!
+
+		a.btn.btn-default Default
+
+		a.btn.btn-primary( href="users" ) Primary
+
+		a.btn.btn-success Success
+
+		a.btn.btn-info Info
+
+		a.btn.btn-warning Warning
+
+		a.btn.btn-danger Danger

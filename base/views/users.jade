@@ -1,0 +1,15 @@
+extends ./layout/default.jade
+
+block title
+    title connect to mysql
+
+block content
+    h1= title
+    table(border=1)
+      tr
+        th name
+        th email
+      - each user in users
+        tr
+          td= user.name
+          td= user.email
